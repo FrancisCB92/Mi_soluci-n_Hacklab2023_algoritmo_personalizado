@@ -27,7 +27,7 @@ def encrypt(plaintext, key):
     return ciphertext
 
 test_1 = encrypt("hola mundo", 3)
-print("Test 1:", test_1)  # Expected: "krod pxqgr"  
+print("Test 1:", test_1) 
 
 def d_encrypt(plaintext, key):
     alphabet = j_alph
@@ -36,8 +36,6 @@ def d_encrypt(plaintext, key):
         character = plaintext[i]
         ciphertext = ciphertext + alphabet[(alphabet.index(character) - key) % len(alphabet)]
     return ciphertext 
-
-
 
 for msg in c_msgs:
   texto = d_encrypt(msg, 4)
